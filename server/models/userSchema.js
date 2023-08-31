@@ -37,6 +37,10 @@ const userSchema = new mongoose.Schema({
 			zipCode: ""
 		}
 	},
+	shoppingCartItems: {
+		type: Array,
+		default: []
+	},
 	createdAt: {
 		type: Date,
 		default: new Date().toISOString().split('T')[0]

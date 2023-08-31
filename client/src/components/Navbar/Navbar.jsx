@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import NavbarButton from './NavbarButton'
 import NavbarIcon from './NavbarIcon'
+import NavbarLink from './NavbarLink'
 
 import wolfIcon from './images/wolfIcon.svg'
 import profileIcon from './images/profileIcon.svg'
@@ -39,6 +40,12 @@ export default function Navbar() {
         }
     }
     
+    const handleCartIcon = (e) => {
+
+        e.preventDefault()
+        navigate('/checkout')
+
+    }
 
     return(
 
@@ -54,7 +61,7 @@ export default function Navbar() {
 
                     <NavbarButton text="SPORT" url="/" />
                     <NavbarButton text="MEN" url="/" />
-                    <NavbarButton text="WOMEM" url="/" />
+                    <NavbarButton text="WOMEM" url="/women" />
                     <NavbarButton text="CUSTOM" url="/" />
                     <NavbarButton text="DEALS" url="/" />
 
@@ -64,7 +71,7 @@ export default function Navbar() {
 
                     <NavbarIcon image={ profileIcon } onClick={ handleProfileIcon } />
                     <NavbarIcon image={ heartIcon } onClick={ handleHeartIcon } />
-                    <NavbarIcon image={ cartIcon } />
+                    <NavbarLink image={ cartIcon } to="checkout"/>
                     
                 </div>
 

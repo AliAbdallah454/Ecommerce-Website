@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser')
 
 const userAuthRouter = require('./routes/userAuth')
 const userInfoRouter = require('./routes/userInfo')
+const itemsRouter = require('./routes/items')
 
 const app = express()
 
@@ -20,6 +21,7 @@ app.use(cors({
 
 app.use('/users', userAuthRouter)
 app.use('/userinfo', userInfoRouter)
+app.use('/items', itemsRouter)
 
 const MONGODB_URI = `mongodb+srv://alikhaledabdallah454:${process.env.MONGO_PASSWORD}@cluster0.0tosuve.mongodb.net/?retryWrites=true&w=majority`
 mongoose.connect(MONGODB_URI, {
