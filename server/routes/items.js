@@ -8,13 +8,14 @@ const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 const { validateUser } = require('../middleware/userAuthMiddleware')
 
 const router = express.Router()
+exports.router = router
 
 router.get("/get-womens-items", async (req, res) => {
     const items = await itemSchema.find({})
     res.json(items)
 })
 
-router.post("/add-item", validateUser, async (req, res) => {
+router.post("/add-item", async (req, res) => {
 
     const token = req.cookies.jwt
 
@@ -84,7 +85,7 @@ router.post("/remove-item", async (req, res) => {
 
 })
 
-router.get("/checkout", validateUser,async (req, res) => {
+router.get("/checkout",async (req, res) => {
 
     const token = req.cookies.jwt
 

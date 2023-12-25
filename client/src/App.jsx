@@ -13,28 +13,12 @@ import Logout from "./components/Profile/Logout";
 
 import Women from "./components/Women/Women";
 
-import ItemCard from "./components/ItemCard/ItemCard";
 import { createContext, useContext, useEffect, useState } from "react";
 import Checkout from "./components/Checkout/Checkout";
 
-export const ShoppingCart = createContext()
+// export const ShoppingCart = createContext()
 
 export default function App() {
-
-	// let [items, setItems] = useState([])
-
-	// useEffect(() => {
-
-	// 	const getItems = async () => {
-	// 		const response = await axios.get("http://localhost:5000/items/get-womens-items", { withCredentials: true })
-	// 		console.log(response.data)
-	// 		setItems(response.data)
-	// 	}
-
-	// 	getItems()
-
-	// }, [])
-
 
 	return (
 

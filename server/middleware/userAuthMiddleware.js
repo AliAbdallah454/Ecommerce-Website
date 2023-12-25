@@ -13,15 +13,14 @@ const validateUser = (req, res, next) => {
 
             }
             else{                
-                res.json({ status: "ok", message: "validated" })
+                // res.json({ status: "ok", message: "validated" })
                 next()
             }
         })
 
     }
-    else{
-        return res.json({ status: "failed", message: 'no token found' })
-    }
+
+    return res.json({ status: "failed", message: 'no token found' })
     
 }
 
