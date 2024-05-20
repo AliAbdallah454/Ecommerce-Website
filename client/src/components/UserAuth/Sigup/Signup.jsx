@@ -57,7 +57,7 @@ export default function Signup() {
             verifyPassword: verifyPassword
         }
 
-        const response = await axios.post("http://localhost:5000/users/signup", signupInfo, { withCredentials: true })
+        const response = await axios.post("http://localhost:3001/users/signup", signupInfo, { withCredentials: true })
         if(response.data.status === "ok"){
             navigate('/profile/dashboard')
         }

@@ -37,7 +37,7 @@ export default function Login() {
             password: password
         }
 
-        const response = await axios.post("http://localhost:5000/users/login", loginInof, { withCredentials : true })
+        const response = await axios.post("http://localhost:3001/users/login", loginInof, { withCredentials : true })
 
         if(response.data.status === "ok"){
             navigate('/profile/dashboard')

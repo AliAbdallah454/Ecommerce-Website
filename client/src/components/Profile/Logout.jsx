@@ -11,7 +11,7 @@ export default function Logout() {
     const handleLogout = async (e) => {
 
         e.preventDefault()
-        const response = await axios.get("http://localhost:5000/users/logout", { withCredentials: true })
+        const response = await axios.get("http://localhost:3001/users/logout", { withCredentials: true })
         alert(response.data.message)
         if(response.data.status === "ok"){
             navigate('/')

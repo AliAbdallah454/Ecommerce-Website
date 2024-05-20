@@ -19,7 +19,7 @@ export default function Checkout() {
         const check = async () => {
             
             try{
-                const response = await axios.get("http://localhost:5000/items/get-items-in-shopping-cart", { withCredentials: true })
+                const response = await axios.get("http://localhost:3001/items/get-items-in-shopping-cart", { withCredentials: true })
                 
                 let p = 0
 

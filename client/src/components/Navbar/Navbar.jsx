@@ -17,7 +17,7 @@ export default function Navbar() {
     const handleProfileIcon = async (e) => {
         e.preventDefault()
 
-        const response = await axios.get('http://localhost:5000/users/is-signed-in', {withCredentials: true})
+        const response = await axios.get('http://localhost:3001/users/is-signed-in', {withCredentials: true})
 
         if(response.data.status === "ok"){
             navigate('/profile/dashboard')
@@ -30,7 +30,7 @@ export default function Navbar() {
     const handleHeartIcon = async (e) => {
         e.preventDefault()
 
-        const response = await axios.get('http://localhost:5000/users/is-signed-in', {withCredentials: true})
+        const response = await axios.get('http://localhost:3001/users/is-signed-in', {withCredentials: true})
 
         if(response.data.status === "ok"){
             navigate('/profile/dashboard')

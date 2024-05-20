@@ -5,7 +5,7 @@ export default function CheckoutButton() {
 
     const handleClick = async () => {
 
-        const response = await axios.get("http://localhost:5000/items/checkout", { withCredentials: true })
+        const response = await axios.get("http://localhost:3001/items/checkout", { withCredentials: true })
         console.log(response.data)  
 
         window.location.href = response.data.url;

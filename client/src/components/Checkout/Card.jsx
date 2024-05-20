@@ -11,7 +11,7 @@ export default function Card({ image, name, type, price, quantity, id, stateInfo
             id: id
         }
 
-        const response = await axios.post("http://localhost:5000/items/remove-item", info, { withCredentials: true })
+        const response = await axios.post("http://localhost:3001/items/remove-item", info, { withCredentials: true })
         if(response.data.status === "ok"){
             const newInfo =  { totalItems: stateInfo.totalItems - 1, totalPrice: stateInfo.totalPrice - price, items: stateInfo.items.filter(item => item._id !== id) }
             setInfo(newInfo)

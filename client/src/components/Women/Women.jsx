@@ -11,7 +11,7 @@ export default function Women() {
 
         const getItems = async () => {
 
-            const response = await axios.get("http://localhost:5000/items/get-womens-items", { withCredentials: true })
+            const response = await axios.get("http://localhost:3001/items/get-womens-items", { withCredentials: true })
             setItems(response.data)
 
         }

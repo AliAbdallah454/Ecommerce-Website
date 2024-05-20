@@ -31,7 +31,7 @@ export default function ResetPassword() {
             verifyNewPassword: verifyNewPassword
         }
 
-        const response = await axios.post("http://localhost:5000/userinfo/resetpassword", info, { withCredentials: true })
+        const response = await axios.post("http://localhost:3001/userinfo/resetpassword", info, { withCredentials: true })
         alert(response.data.message)
 
     }

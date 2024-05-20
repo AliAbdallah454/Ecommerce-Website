@@ -16,11 +16,14 @@ export default function ItemCard({ image, price, name, itemId }) {
         console.log('inFunc')
         console.log(info.itemId)
 
-        const response = await axios.post("http://localhost:5000/items/add-item", info, { withCredentials: true })
+        const response = await axios.post("http://localhost:3001/items/add-item", info, { withCredentials: true })
 
         if(response.data.status === 'failed'){
             alert("You are not logged in")
             navigate('/login')
+        }
+        else{
+            {alert("Added successfuly")}
         }
 
     }

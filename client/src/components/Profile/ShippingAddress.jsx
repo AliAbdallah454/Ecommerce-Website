@@ -99,7 +99,7 @@ export default function ShippingAddress() {
             newAddress: newAddress,
         }
 
-        const response = await axios.post("http://localhost:5000/userinfo/updateaddress", info, { withCredentials: true })
+        const response = await axios.post("http://localhost:3001/userinfo/updateaddress", info, { withCredentials: true })
         if(response.data.status === "ok"){
             alert(response.data.message)
         } 
@@ -114,7 +114,7 @@ export default function ShippingAddress() {
 
         const fetchData = async () => {
             console.log('in useeffect')
-            const response = await axios.get("http://localhost:5000/userinfo/getallinfo", { withCredentials: true })
+            const response = await axios.get("http://localhost:3001/userinfo/getallinfo", { withCredentials: true })
             const user = response.data.user
             console.log(user)
             
